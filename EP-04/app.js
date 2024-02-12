@@ -7,7 +7,7 @@ import ReactDOM from "react-dom/client";
 Body
 -Search 
 -restorant container
--resto card  
+-resto card  and data
 Footer
 -copyright
 -liks,address,contact*/
