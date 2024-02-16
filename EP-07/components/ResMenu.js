@@ -8,6 +8,7 @@ const ResMenu = () => {
     const [resInfo , setResInfo] = useState(null);
     const {resId} = useParams();
     
+    
     useEffect( () => {
         fetchMenu();
     } , []);
@@ -37,7 +38,7 @@ const ResMenu = () => {
                     <p>{costForTwoMessage}</p>
                 </div> 
                 <div >
-                    <p>{avgRating}</p>
+                    <p>{avgRating}&#9733;</p>
                     <p>{areaName} , {slaString}</p>
                 </div> 
             </div>   
@@ -46,7 +47,7 @@ const ResMenu = () => {
                 <ul>
                     {itemCards.map((item)=> (
                             <li key={item.card.info.id}>
-                                {item.card.info.name} - Rs.{item.card.info.price / 100}
+                                {item.card.info.name} - Rs.{item.card.info.price / 100 || item.card.info.defaultPrice/100}
                             </li>
                     ))}
                 </ul>
